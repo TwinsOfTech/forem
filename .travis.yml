@@ -2,9 +2,9 @@ language: ruby
 before_script: bundle exec rake forem:dummy_app --trace
 script: bundle exec rspec spec
 env:
-  - DB=postgres
-  - DB=mysql
-  - DB=sqlite
+  - CI=true DB=sqlite
+  - CI=true DB=mysql
+  - CI=true DB=postgres
 rvm:
   - 2.0
   - 1.9.3
